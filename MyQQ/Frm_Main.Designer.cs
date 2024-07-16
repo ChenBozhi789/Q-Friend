@@ -30,6 +30,8 @@
         {
             components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_Main));
+            ListViewGroup listViewGroup1 = new ListViewGroup("My Friend", HorizontalAlignment.Left);
+            ListViewGroup listViewGroup2 = new ListViewGroup("Strengers", HorizontalAlignment.Left);
             imalistHead = new ImageList(components);
             imglistSmallHead = new ImageList(components);
             imglistMessage = new ImageList(components);
@@ -42,9 +44,21 @@
             lblName = new Label();
             txtSign = new TextBox();
             lvFriend = new ListView();
+            tsOperation = new ToolStrip();
+            contextMenuStrip = new ContextMenuStrip(components);
+            tsMenuView = new ToolStripMenuItem();
+            tsMenuAdd = new ToolStripMenuItem();
+            tsMenuDel = new ToolStripMenuItem();
+            tsbtninfo = new ToolStripButton();
+            tsbtnSearchFriend = new ToolStripButton();
+            tsbtnUpdateFriendList = new ToolStripButton();
+            tsbtnMessageReading = new ToolStripButton();
+            tsbtnExit = new ToolStripButton();
             ((System.ComponentModel.ISupportInitialize)pboxHead).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pboxMin).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pboxClose).BeginInit();
+            tsOperation.SuspendLayout();
+            contextMenuStrip.SuspendLayout();
             SuspendLayout();
             // 
             // imalistHead
@@ -326,11 +340,103 @@
             // lvFriend
             // 
             lvFriend.BackColor = Color.OldLace;
+            lvFriend.ContextMenuStrip = contextMenuStrip;
+            listViewGroup1.Header = "My Friend";
+            listViewGroup1.Name = "listViewGroup1";
+            listViewGroup2.Header = "Strengers";
+            listViewGroup2.Name = "listViewGroup2";
+            lvFriend.Groups.AddRange(new ListViewGroup[] { listViewGroup1, listViewGroup2 });
+            lvFriend.LargeImageList = imalistHead;
             lvFriend.Location = new Point(-5, 114);
+            lvFriend.MultiSelect = false;
             lvFriend.Name = "lvFriend";
             lvFriend.Size = new Size(288, 502);
+            lvFriend.SmallImageList = imglistSmallHead;
+            lvFriend.StateImageList = imglistSmallHead;
             lvFriend.TabIndex = 5;
             lvFriend.UseCompatibleStateImageBehavior = false;
+            // 
+            // tsOperation
+            // 
+            tsOperation.Dock = DockStyle.Bottom;
+            tsOperation.ImageScalingSize = new Size(20, 20);
+            tsOperation.Items.AddRange(new ToolStripItem[] { tsbtninfo, tsbtnSearchFriend, tsbtnUpdateFriendList, tsbtnMessageReading, tsbtnExit });
+            tsOperation.Location = new Point(0, 620);
+            tsOperation.Name = "tsOperation";
+            tsOperation.Size = new Size(282, 27);
+            tsOperation.TabIndex = 6;
+            tsOperation.Text = "toolStrip1";
+            // 
+            // contextMenuStrip
+            // 
+            contextMenuStrip.ImageScalingSize = new Size(20, 20);
+            contextMenuStrip.Items.AddRange(new ToolStripItem[] { tsMenuView, tsMenuAdd, tsMenuDel });
+            contextMenuStrip.Name = "contextMenuStrip1";
+            contextMenuStrip.Size = new Size(161, 76);
+            // 
+            // tsMenuView
+            // 
+            tsMenuView.Name = "tsMenuView";
+            tsMenuView.Size = new Size(160, 24);
+            tsMenuView.Text = "Small Head";
+            // 
+            // tsMenuAdd
+            // 
+            tsMenuAdd.Name = "tsMenuAdd";
+            tsMenuAdd.Size = new Size(160, 24);
+            tsMenuAdd.Text = "Add Friend";
+            tsMenuAdd.Visible = false;
+            // 
+            // tsMenuDel
+            // 
+            tsMenuDel.Name = "tsMenuDel";
+            tsMenuDel.Size = new Size(160, 24);
+            tsMenuDel.Text = "Delete";
+            tsMenuDel.Visible = false;
+            // 
+            // tsbtninfo
+            // 
+            tsbtninfo.DisplayStyle = ToolStripItemDisplayStyle.Image;
+            tsbtninfo.Image = (Image)resources.GetObject("tsbtninfo.Image");
+            tsbtninfo.ImageTransparentColor = Color.Magenta;
+            tsbtninfo.Name = "tsbtninfo";
+            tsbtninfo.Size = new Size(29, 24);
+            tsbtninfo.Text = "personalInfo";
+            // 
+            // tsbtnSearchFriend
+            // 
+            tsbtnSearchFriend.Image = (Image)resources.GetObject("tsbtnSearchFriend.Image");
+            tsbtnSearchFriend.ImageTransparentColor = Color.Magenta;
+            tsbtnSearchFriend.Name = "tsbtnSearchFriend";
+            tsbtnSearchFriend.Size = new Size(64, 24);
+            tsbtnSearchFriend.Text = "Find";
+            // 
+            // tsbtnUpdateFriendList
+            // 
+            tsbtnUpdateFriendList.DisplayStyle = ToolStripItemDisplayStyle.Image;
+            tsbtnUpdateFriendList.Image = (Image)resources.GetObject("tsbtnUpdateFriendList.Image");
+            tsbtnUpdateFriendList.ImageTransparentColor = Color.Magenta;
+            tsbtnUpdateFriendList.Name = "tsbtnUpdateFriendList";
+            tsbtnUpdateFriendList.Size = new Size(29, 24);
+            tsbtnUpdateFriendList.Text = "toolStripButton2";
+            // 
+            // tsbtnMessageReading
+            // 
+            tsbtnMessageReading.DisplayStyle = ToolStripItemDisplayStyle.Image;
+            tsbtnMessageReading.Image = (Image)resources.GetObject("tsbtnMessageReading.Image");
+            tsbtnMessageReading.ImageTransparentColor = Color.Magenta;
+            tsbtnMessageReading.Name = "tsbtnMessageReading";
+            tsbtnMessageReading.Size = new Size(29, 24);
+            tsbtnMessageReading.Text = "System Info";
+            // 
+            // tsbtnExit
+            // 
+            tsbtnExit.DisplayStyle = ToolStripItemDisplayStyle.Image;
+            tsbtnExit.Image = (Image)resources.GetObject("tsbtnExit.Image");
+            tsbtnExit.ImageTransparentColor = Color.Magenta;
+            tsbtnExit.Name = "tsbtnExit";
+            tsbtnExit.Size = new Size(29, 24);
+            tsbtnExit.Text = "Exit";
             // 
             // Frm_Main
             // 
@@ -339,6 +445,7 @@
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             BackgroundImageLayout = ImageLayout.None;
             ClientSize = new Size(282, 647);
+            Controls.Add(tsOperation);
             Controls.Add(lvFriend);
             Controls.Add(txtSign);
             Controls.Add(lblName);
@@ -354,6 +461,9 @@
             ((System.ComponentModel.ISupportInitialize)pboxHead).EndInit();
             ((System.ComponentModel.ISupportInitialize)pboxMin).EndInit();
             ((System.ComponentModel.ISupportInitialize)pboxClose).EndInit();
+            tsOperation.ResumeLayout(false);
+            tsOperation.PerformLayout();
+            contextMenuStrip.ResumeLayout(false);
             ResumeLayout(false);
             PerformLayout();
         }
@@ -372,5 +482,15 @@
         private Label lblName;
         private TextBox txtSign;
         private ListView lvFriend;
+        private ToolStrip tsOperation;
+        private ContextMenuStrip contextMenuStrip;
+        private ToolStripMenuItem tsMenuView;
+        private ToolStripMenuItem tsMenuAdd;
+        private ToolStripMenuItem tsMenuDel;
+        private ToolStripButton tsbtninfo;
+        private ToolStripButton tsbtnSearchFriend;
+        private ToolStripButton tsbtnUpdateFriendList;
+        private ToolStripButton tsbtnMessageReading;
+        private ToolStripButton tsbtnExit;
     }
 }

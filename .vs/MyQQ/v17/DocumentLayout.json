@@ -1,26 +1,30 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\my_work\\C# Project Development\\Q Friend\\MyQQ\\",
+  "WorkspaceRootPath": "D:\\my_work\\Q_Friend\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{65C5EFDA-92ED-4E98-BAB0-9DD33F0876ED}|MyQQ\\MyQQ.csproj|d:\\my_work\\c# project development\\q friend\\myqq\\myqq\\registerform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{65C5EFDA-92ED-4E98-BAB0-9DD33F0876ED}|MyQQ\\MyQQ.csproj|solutionrelative:myqq\\registerform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{65C5EFDA-92ED-4E98-BAB0-9DD33F0876ED}|MyQQ\\MyQQ.csproj|d:\\my_work\\q_friend\\myqq\\frm_main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{65C5EFDA-92ED-4E98-BAB0-9DD33F0876ED}|MyQQ\\MyQQ.csproj|solutionrelative:myqq\\frm_main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{65C5EFDA-92ED-4E98-BAB0-9DD33F0876ED}|MyQQ\\MyQQ.csproj|d:\\my_work\\c# project development\\q friend\\myqq\\myqq\\frm_login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{65C5EFDA-92ED-4E98-BAB0-9DD33F0876ED}|MyQQ\\MyQQ.csproj|solutionrelative:myqq\\frm_login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{65C5EFDA-92ED-4E98-BAB0-9DD33F0876ED}|MyQQ\\MyQQ.csproj|d:\\my_work\\c# project development\\q friend\\myqq\\myqq\\frm_main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{65C5EFDA-92ED-4E98-BAB0-9DD33F0876ED}|MyQQ\\MyQQ.csproj|D:\\my_work\\Q_Friend\\myqq\\frm_main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{65C5EFDA-92ED-4E98-BAB0-9DD33F0876ED}|MyQQ\\MyQQ.csproj|solutionrelative:myqq\\frm_main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{65C5EFDA-92ED-4E98-BAB0-9DD33F0876ED}|MyQQ\\MyQQ.csproj|d:\\my_work\\c# project development\\q friend\\myqq\\myqq\\registerform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{65C5EFDA-92ED-4E98-BAB0-9DD33F0876ED}|MyQQ\\MyQQ.csproj|D:\\my_work\\Q_Friend\\myqq\\dataoperator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{65C5EFDA-92ED-4E98-BAB0-9DD33F0876ED}|MyQQ\\MyQQ.csproj|solutionrelative:myqq\\dataoperator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{65C5EFDA-92ED-4E98-BAB0-9DD33F0876ED}|MyQQ\\MyQQ.csproj|D:\\my_work\\Q_Friend\\myqq\\registerform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{65C5EFDA-92ED-4E98-BAB0-9DD33F0876ED}|MyQQ\\MyQQ.csproj|solutionrelative:myqq\\registerform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{65C5EFDA-92ED-4E98-BAB0-9DD33F0876ED}|MyQQ\\MyQQ.csproj|d:\\my_work\\c# project development\\q friend\\myqq\\myqq\\dataoperator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{65C5EFDA-92ED-4E98-BAB0-9DD33F0876ED}|MyQQ\\MyQQ.csproj|solutionrelative:myqq\\dataoperator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{65C5EFDA-92ED-4E98-BAB0-9DD33F0876ED}|MyQQ\\MyQQ.csproj|d:\\my_work\\q_friend\\myqq\\registerform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{65C5EFDA-92ED-4E98-BAB0-9DD33F0876ED}|MyQQ\\MyQQ.csproj|solutionrelative:myqq\\registerform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{65C5EFDA-92ED-4E98-BAB0-9DD33F0876ED}|MyQQ\\MyQQ.csproj|D:\\my_work\\Q_Friend\\myqq\\frm_login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{65C5EFDA-92ED-4E98-BAB0-9DD33F0876ED}|MyQQ\\MyQQ.csproj|solutionrelative:myqq\\frm_login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,20 +34,33 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 5,
               "Title": "Frm_Login.cs [Design]",
-              "DocumentMoniker": "D:\\my_work\\C# Project Development\\Q Friend\\MyQQ\\MyQQ\\Frm_Login.cs",
+              "DocumentMoniker": "D:\\my_work\\Q_Friend\\MyQQ\\Frm_Login.cs",
               "RelativeDocumentMoniker": "MyQQ\\Frm_Login.cs",
-              "ToolTip": "D:\\my_work\\C# Project Development\\Q Friend\\MyQQ\\MyQQ\\Frm_Login.cs [Design]",
+              "ToolTip": "D:\\my_work\\Q_Friend\\MyQQ\\Frm_Login.cs [Design]",
               "RelativeToolTip": "MyQQ\\Frm_Login.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-07-11T05:02:14.263Z",
               "IsPinned": true,
               "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Frm_Main.cs",
+              "DocumentMoniker": "D:\\my_work\\Q_Friend\\MyQQ\\Frm_Main.cs",
+              "RelativeDocumentMoniker": "MyQQ\\Frm_Main.cs",
+              "ToolTip": "D:\\my_work\\Q_Friend\\MyQQ\\Frm_Main.cs",
+              "RelativeToolTip": "MyQQ\\Frm_Main.cs",
+              "ViewState": "AQIAAAoAAAAAAAAAAAAcwBUAAAAXAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-16T08:44:25.59Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Bookmark",
@@ -67,11 +84,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "Frm_Main.cs [Design]",
-              "DocumentMoniker": "D:\\my_work\\C# Project Development\\Q Friend\\MyQQ\\MyQQ\\Frm_Main.cs",
+              "DocumentMoniker": "D:\\my_work\\Q_Friend\\MyQQ\\Frm_Main.cs",
               "RelativeDocumentMoniker": "MyQQ\\Frm_Main.cs",
-              "ToolTip": "D:\\my_work\\C# Project Development\\Q Friend\\MyQQ\\MyQQ\\Frm_Main.cs [Design]",
+              "ToolTip": "D:\\my_work\\Q_Friend\\MyQQ\\Frm_Main.cs [Design]",
               "RelativeToolTip": "MyQQ\\Frm_Main.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-07-16T06:00:16.501Z",
@@ -79,11 +96,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 4,
               "Title": "RegisterForm.cs [Design]",
-              "DocumentMoniker": "D:\\my_work\\C# Project Development\\Q Friend\\MyQQ\\MyQQ\\RegisterForm.cs",
+              "DocumentMoniker": "D:\\my_work\\Q_Friend\\MyQQ\\RegisterForm.cs",
               "RelativeDocumentMoniker": "MyQQ\\RegisterForm.cs",
-              "ToolTip": "D:\\my_work\\C# Project Development\\Q Friend\\MyQQ\\MyQQ\\RegisterForm.cs [Design]",
+              "ToolTip": "D:\\my_work\\Q_Friend\\MyQQ\\RegisterForm.cs [Design]",
               "RelativeToolTip": "MyQQ\\RegisterForm.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-07-12T21:11:13.154Z",
@@ -93,9 +110,9 @@
               "$type": "Document",
               "DocumentIndex": 3,
               "Title": "RegisterForm.cs",
-              "DocumentMoniker": "D:\\my_work\\C# Project Development\\Q Friend\\MyQQ\\MyQQ\\RegisterForm.cs",
+              "DocumentMoniker": "D:\\my_work\\Q_Friend\\MyQQ\\RegisterForm.cs",
               "RelativeDocumentMoniker": "MyQQ\\RegisterForm.cs",
-              "ToolTip": "D:\\my_work\\C# Project Development\\Q Friend\\MyQQ\\MyQQ\\RegisterForm.cs",
+              "ToolTip": "D:\\my_work\\Q_Friend\\MyQQ\\RegisterForm.cs",
               "RelativeToolTip": "MyQQ\\RegisterForm.cs",
               "ViewState": "AQIAAF8AAAAAAAAAAIAwwGsAAAAZAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -104,11 +121,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 2,
               "Title": "DataOperator.cs",
-              "DocumentMoniker": "D:\\my_work\\C# Project Development\\Q Friend\\MyQQ\\MyQQ\\DataOperator.cs",
+              "DocumentMoniker": "D:\\my_work\\Q_Friend\\MyQQ\\DataOperator.cs",
               "RelativeDocumentMoniker": "MyQQ\\DataOperator.cs",
-              "ToolTip": "D:\\my_work\\C# Project Development\\Q Friend\\MyQQ\\MyQQ\\DataOperator.cs",
+              "ToolTip": "D:\\my_work\\Q_Friend\\MyQQ\\DataOperator.cs",
               "RelativeToolTip": "MyQQ\\DataOperator.cs",
               "ViewState": "AQIAABkAAAAAAAAAAAAQwCwAAAAvAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
