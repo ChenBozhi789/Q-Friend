@@ -1,13 +1,25 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
+    <Compile Update="Frm_AddFriend.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Frm_Chat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Frm_EditInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Frm_Login.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Frm_Main.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="RegisterForm.cs">
+    <Compile Update="Frm_Register.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Frm_Remind.cs">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>

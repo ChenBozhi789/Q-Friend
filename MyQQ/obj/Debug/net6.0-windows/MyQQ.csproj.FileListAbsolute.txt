@@ -40,7 +40,6 @@ D:\my_work\Q_Friend\MyQQ\obj\Debug\net6.0-windows\MyQQ.csproj.AssemblyReference.
 D:\my_work\Q_Friend\MyQQ\obj\Debug\net6.0-windows\MyQQ.Frm_Login.resources
 D:\my_work\Q_Friend\MyQQ\obj\Debug\net6.0-windows\MyQQ.Frm_Main.resources
 D:\my_work\Q_Friend\MyQQ\obj\Debug\net6.0-windows\MyQQ.Properties.Resources.resources
-D:\my_work\Q_Friend\MyQQ\obj\Debug\net6.0-windows\MyQQ.RegisterForm.resources
 D:\my_work\Q_Friend\MyQQ\obj\Debug\net6.0-windows\MyQQ.csproj.GenerateResource.cache
 D:\my_work\Q_Friend\MyQQ\obj\Debug\net6.0-windows\MyQQ.GeneratedMSBuildEditorConfig.editorconfig
 D:\my_work\Q_Friend\MyQQ\obj\Debug\net6.0-windows\MyQQ.AssemblyInfoInputs.cache
@@ -53,3 +52,8 @@ D:\my_work\Q_Friend\MyQQ\obj\Debug\net6.0-windows\refint\MyQQ.dll
 D:\my_work\Q_Friend\MyQQ\obj\Debug\net6.0-windows\MyQQ.pdb
 D:\my_work\Q_Friend\MyQQ\obj\Debug\net6.0-windows\MyQQ.genruntimeconfig.cache
 D:\my_work\Q_Friend\MyQQ\obj\Debug\net6.0-windows\ref\MyQQ.dll
+D:\my_work\Q_Friend\MyQQ\obj\Debug\net6.0-windows\MyQQ.Frm_Register.resources
+D:\my_work\Q_Friend\MyQQ\obj\Debug\net6.0-windows\MyQQ.Frm_EditInfo.resources
+D:\my_work\Q_Friend\MyQQ\obj\Debug\net6.0-windows\MyQQ.Frm_AddFriend.resources
+D:\my_work\Q_Friend\MyQQ\obj\Debug\net6.0-windows\MyQQ.Frm_Remind.resources
+D:\my_work\Q_Friend\MyQQ\obj\Debug\net6.0-windows\MyQQ.Frm_Chat.resources

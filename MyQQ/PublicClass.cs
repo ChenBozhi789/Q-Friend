@@ -6,8 +6,9 @@ using System.Threading.Tasks;
 
 namespace MyQQ
 {
-    internal class PublicClass
+    public class PublicClass
     {
+        // Record the ID of currently logged in User
         public static int LoginID;
     }
 }

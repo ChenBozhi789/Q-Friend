@@ -113,6 +113,7 @@
             // 
             // pBoxLogin
             // 
+            pBoxLogin.BackColor = Color.Transparent;
             pBoxLogin.Location = new Point(131, 287);
             pBoxLogin.Name = "pBoxLogin";
             pBoxLogin.Size = new Size(197, 31);

@@ -30,8 +30,8 @@
         {
             components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_Main));
-            ListViewGroup listViewGroup1 = new ListViewGroup("My Friend", HorizontalAlignment.Left);
-            ListViewGroup listViewGroup2 = new ListViewGroup("Strengers", HorizontalAlignment.Left);
+            ListViewGroup listViewGroup1 = new ListViewGroup("MyFriend", HorizontalAlignment.Left);
+            ListViewGroup listViewGroup2 = new ListViewGroup("Stranger", HorizontalAlignment.Left);
             imalistHead = new ImageList(components);
             imglistSmallHead = new ImageList(components);
             imglistMessage = new ImageList(components);
@@ -44,8 +44,7 @@
             lblName = new Label();
             txtSign = new TextBox();
             lvFriend = new ListView();
-            tsOperation = new ToolStrip();
-            contextMenuStrip = new ContextMenuStrip(components);
+            cmsFriendList = new ContextMenuStrip(components);
             tsMenuView = new ToolStripMenuItem();
             tsMenuAdd = new ToolStripMenuItem();
             tsMenuDel = new ToolStripMenuItem();
@@ -54,11 +53,12 @@
             tsbtnUpdateFriendList = new ToolStripButton();
             tsbtnMessageReading = new ToolStripButton();
             tsbtnExit = new ToolStripButton();
+            tsOperation = new ToolStrip();
             ((System.ComponentModel.ISupportInitialize)pboxHead).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pboxMin).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pboxClose).BeginInit();
+            cmsFriendList.SuspendLayout();
             tsOperation.SuspendLayout();
-            contextMenuStrip.SuspendLayout();
             SuspendLayout();
             // 
             // imalistHead
@@ -296,83 +296,82 @@
             // 
             // pboxHead
             // 
-            pboxHead.Location = new Point(12, 43);
+            pboxHead.Location = new Point(7, 42);
             pboxHead.Name = "pboxHead";
-            pboxHead.Size = new Size(58, 65);
+            pboxHead.Size = new Size(66, 66);
+            pboxHead.SizeMode = PictureBoxSizeMode.Zoom;
             pboxHead.TabIndex = 0;
             pboxHead.TabStop = false;
             // 
             // pboxMin
             // 
             pboxMin.BackColor = Color.Transparent;
-            pboxMin.Location = new Point(232, 0);
+            pboxMin.Location = new Point(227, 5);
             pboxMin.Name = "pboxMin";
-            pboxMin.Size = new Size(27, 24);
+            pboxMin.Size = new Size(27, 18);
             pboxMin.TabIndex = 1;
             pboxMin.TabStop = false;
+            pboxMin.Click += pboxMin_Click;
             // 
             // pboxClose
             // 
             pboxClose.BackColor = Color.Transparent;
-            pboxClose.Location = new Point(256, 0);
+            pboxClose.Location = new Point(254, 6);
             pboxClose.Name = "pboxClose";
-            pboxClose.Size = new Size(27, 24);
+            pboxClose.Size = new Size(27, 18);
             pboxClose.TabIndex = 2;
             pboxClose.TabStop = false;
+            pboxClose.Click += pboxClose_Click;
             // 
             // lblName
             // 
             lblName.AutoSize = true;
-            lblName.Location = new Point(103, 38);
+            lblName.Font = new Font("Comic Sans MS", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            lblName.ForeColor = Color.RoyalBlue;
+            lblName.Location = new Point(84, 38);
             lblName.Name = "lblName";
-            lblName.Size = new Size(53, 20);
+            lblName.Size = new Size(48, 28);
             lblName.TabIndex = 3;
-            lblName.Text = "label1";
+            lblName.Text = "1111";
             // 
             // txtSign
             // 
             txtSign.BorderStyle = BorderStyle.None;
-            txtSign.Location = new Point(103, 61);
+            txtSign.Location = new Point(79, 65);
             txtSign.Name = "txtSign";
-            txtSign.Size = new Size(125, 20);
+            txtSign.ReadOnly = true;
+            txtSign.Size = new Size(191, 20);
             txtSign.TabIndex = 4;
             // 
             // lvFriend
             // 
             lvFriend.BackColor = Color.OldLace;
-            lvFriend.ContextMenuStrip = contextMenuStrip;
-            listViewGroup1.Header = "My Friend";
-            listViewGroup1.Name = "listViewGroup1";
-            listViewGroup2.Header = "Strengers";
-            listViewGroup2.Name = "listViewGroup2";
+            lvFriend.ContextMenuStrip = cmsFriendList;
+            listViewGroup1.Header = "MyFriend";
+            listViewGroup1.Name = "listViewGroup3";
+            listViewGroup2.Header = "Stranger";
+            listViewGroup2.Name = "listViewGroup1";
             lvFriend.Groups.AddRange(new ListViewGroup[] { listViewGroup1, listViewGroup2 });
             lvFriend.LargeImageList = imalistHead;
-            lvFriend.Location = new Point(-5, 114);
+            lvFriend.Location = new Point(0, 114);
             lvFriend.MultiSelect = false;
             lvFriend.Name = "lvFriend";
-            lvFriend.Size = new Size(288, 502);
+            lvFriend.Size = new Size(282, 505);
             lvFriend.SmallImageList = imglistSmallHead;
             lvFriend.StateImageList = imglistSmallHead;
             lvFriend.TabIndex = 5;
             lvFriend.UseCompatibleStateImageBehavior = false;
+            lvFriend.View = View.Details;
+            lvFriend.SelectedIndexChanged += lvFriend_SelectedIndexChanged;
+            lvFriend.DoubleClick += lvFriend_DoubleClick;
+            lvFriend.MouseDoubleClick += lvFriend_MouseDoubleClick;
             // 
-            // tsOperation
+            // cmsFriendList
             // 
-            tsOperation.Dock = DockStyle.Bottom;
-            tsOperation.ImageScalingSize = new Size(20, 20);
-            tsOperation.Items.AddRange(new ToolStripItem[] { tsbtninfo, tsbtnSearchFriend, tsbtnUpdateFriendList, tsbtnMessageReading, tsbtnExit });
-            tsOperation.Location = new Point(0, 620);
-            tsOperation.Name = "tsOperation";
-            tsOperation.Size = new Size(282, 27);
-            tsOperation.TabIndex = 6;
-            tsOperation.Text = "toolStrip1";
-            // 
-            // contextMenuStrip
-            // 
-            contextMenuStrip.ImageScalingSize = new Size(20, 20);
-            contextMenuStrip.Items.AddRange(new ToolStripItem[] { tsMenuView, tsMenuAdd, tsMenuDel });
-            contextMenuStrip.Name = "contextMenuStrip1";
-            contextMenuStrip.Size = new Size(161, 76);
+            cmsFriendList.ImageScalingSize = new Size(20, 20);
+            cmsFriendList.Items.AddRange(new ToolStripItem[] { tsMenuView, tsMenuAdd, tsMenuDel });
+            cmsFriendList.Name = "contextMenuStrip1";
+            cmsFriendList.Size = new Size(161, 76);
             // 
             // tsMenuView
             // 
@@ -402,6 +401,7 @@
             tsbtninfo.Name = "tsbtninfo";
             tsbtninfo.Size = new Size(29, 24);
             tsbtninfo.Text = "personalInfo";
+            tsbtninfo.Click += tsbtninfo_Click;
             // 
             // tsbtnSearchFriend
             // 
@@ -410,6 +410,7 @@
             tsbtnSearchFriend.Name = "tsbtnSearchFriend";
             tsbtnSearchFriend.Size = new Size(64, 24);
             tsbtnSearchFriend.Text = "Find";
+            tsbtnSearchFriend.Click += tsbtnSearchFriend_Click;
             // 
             // tsbtnUpdateFriendList
             // 
@@ -418,7 +419,8 @@
             tsbtnUpdateFriendList.ImageTransparentColor = Color.Magenta;
             tsbtnUpdateFriendList.Name = "tsbtnUpdateFriendList";
             tsbtnUpdateFriendList.Size = new Size(29, 24);
-            tsbtnUpdateFriendList.Text = "toolStripButton2";
+            tsbtnUpdateFriendList.Text = "UpdateFriend";
+            tsbtnUpdateFriendList.Click += tsbtnUpdateFriendList_Click;
             // 
             // tsbtnMessageReading
             // 
@@ -428,15 +430,27 @@
             tsbtnMessageReading.Name = "tsbtnMessageReading";
             tsbtnMessageReading.Size = new Size(29, 24);
             tsbtnMessageReading.Text = "System Info";
+            tsbtnMessageReading.Click += tsbtnMessageReading_Click;
             // 
             // tsbtnExit
             // 
-            tsbtnExit.DisplayStyle = ToolStripItemDisplayStyle.Image;
             tsbtnExit.Image = (Image)resources.GetObject("tsbtnExit.Image");
             tsbtnExit.ImageTransparentColor = Color.Magenta;
             tsbtnExit.Name = "tsbtnExit";
-            tsbtnExit.Size = new Size(29, 24);
+            tsbtnExit.Size = new Size(59, 24);
             tsbtnExit.Text = "Exit";
+            tsbtnExit.Click += tsbtnExit_Click;
+            // 
+            // tsOperation
+            // 
+            tsOperation.Dock = DockStyle.Bottom;
+            tsOperation.ImageScalingSize = new Size(20, 20);
+            tsOperation.Items.AddRange(new ToolStripItem[] { tsbtninfo, tsbtnSearchFriend, tsbtnUpdateFriendList, tsbtnMessageReading, tsbtnExit });
+            tsOperation.Location = new Point(0, 620);
+            tsOperation.Name = "tsOperation";
+            tsOperation.Size = new Size(282, 27);
+            tsOperation.TabIndex = 6;
+            tsOperation.Text = "toolStrip1";
             // 
             // Frm_Main
             // 
@@ -458,12 +472,14 @@
             Name = "Frm_Main";
             StartPosition = FormStartPosition.Manual;
             Text = "QQ";
+            Load += Frm_Main_Load;
+            MouseDoubleClick += Frm_Main_MouseDoubleClick;
             ((System.ComponentModel.ISupportInitialize)pboxHead).EndInit();
             ((System.ComponentModel.ISupportInitialize)pboxMin).EndInit();
             ((System.ComponentModel.ISupportInitialize)pboxClose).EndInit();
+            cmsFriendList.ResumeLayout(false);
             tsOperation.ResumeLayout(false);
             tsOperation.PerformLayout();
-            contextMenuStrip.ResumeLayout(false);
             ResumeLayout(false);
             PerformLayout();
         }
@@ -482,8 +498,7 @@
         private Label lblName;
         private TextBox txtSign;
         private ListView lvFriend;
-        private ToolStrip tsOperation;
-        private ContextMenuStrip contextMenuStrip;
+        private ContextMenuStrip cmsFriendList;
         private ToolStripMenuItem tsMenuView;
         private ToolStripMenuItem tsMenuAdd;
         private ToolStripMenuItem tsMenuDel;
@@ -492,5 +507,6 @@
         private ToolStripButton tsbtnUpdateFriendList;
         private ToolStripButton tsbtnMessageReading;
         private ToolStripButton tsbtnExit;
+        private ToolStrip tsOperation;
     }
 }

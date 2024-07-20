@@ -11,11 +11,11 @@ namespace MyQQ
     internal class DataOperator
     {
         // Database connection String
-        private static string ConnString = @"Data Source=OMEN; Database=MyQQ;Integrated Security=True";
+        private static string ConnString = @"Data Source=OMEN; Database=MyQQ; Integrated Security=True";
         // The actual connection object
         public static SqlConnection connection = new SqlConnection(ConnString);
 
-        // 获取查询结果的第一行第一列的值。
+        // Get the value of the first row and first column of the query result
         public int ExecSQL(string sql)
         {
             // "sql" means the query will be executed
@@ -34,6 +34,7 @@ namespace MyQQ
             return num;
         }
 
+        // Return the number of row affected
         public int ExecSQLResult(string sql)
         {
             SqlCommand cmd = new SqlCommand(sql,connection);
@@ -51,10 +52,27 @@ namespace MyQQ
         {
             // SqlDataAdapter：用于填充 DataSet 和更新数据源的数据适配器。
             SqlDataAdapter sqlda = new SqlDataAdapter(sql, connection);
+
             // DataSet：一个内存中的数据缓存，类似于一个数据库，它包含一个或多个表。
             DataSet ds = new DataSet();
+
             sqlda.Fill(ds);
             return ds;
+        }
+
+        public SqlDataReader GetDataReader(string sql)
+        {
+            // The sql statement to be executed
+            SqlCommand command = new SqlCommand(sql, connection);
+
+            // Re-open the database
+            if (connection.State == ConnectionState.Open)
+                connection.Close();
+            connection.Open();
+
+            // Method ExecuteRead() will returns SqlDataReader
+            SqlDataReader dataReader = command.ExecuteReader();
+            return dataReader;
         }
     }
 }

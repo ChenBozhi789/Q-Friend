@@ -25,7 +25,7 @@ namespace MyQQ
             }
             else if (int.Parse(txtID.Text.Trim()) > 65535)
             {
-                MessageBox.Show("Please input Account", "Login Prompt", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Please input valid Account", "Login Prompt", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 txtID.Focus();
                 return false;
             }
@@ -42,7 +42,7 @@ namespace MyQQ
         {
             if (char.IsDigit(e.KeyChar) || (e.KeyChar == '\n') || (e.KeyChar == '\b'))
             {
-                // 表示按键事件没有被处理，控件会继续处理这个按键事件。这意味着按键的字符会显示在控件（如文本框）中。
+                // 表示按键事件没有被处理，控件会继续处理这个按键事件。这意味着按键的字符会显示在控件中。
                 e.Handled = false;
             }
             else
@@ -52,39 +52,44 @@ namespace MyQQ
             }
         }
 
+        private void txtPwd_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == '\r')
+                pBoxLogin_Click(sender, e);
+        }
+
         private void pBoxLogin_Click(object sender, EventArgs e)
         {
             if (ValidateInput())
             {
                 // Customize SQL Query Script
-                //  
-                string sql = "SELECT COUNT(*) FROM tb_User WHERE ID = " + int.Parse(txtID.Text.Trim()) + " and Pwd = '" + txtPwd.Text.Trim() + "'";
+                string sql = "SELECT COUNT(*) FROM tb_User WHERE ID = " + int.Parse(txtID.Text.Trim()) + " AND Pwd = '" + txtPwd.Text.Trim() + "'";
                 int num = dataOper.ExecSQL(sql);
-
-                // Validate pass
+                // If database have corresponding, then validate pasw
                 if (num == 1)
                 {
                     // Set User LoginID
                     PublicClass.LoginID = int.Parse(txtID.Text.Trim());
+
                     // If remember checkbox has been checked
                     if (cboxRemember.Checked)
                     {
-                        dataOper.ExecSQLResult("UPDATE tb_User SET Remember = 1 WHERE ID = " + int.Parse(txtID.Text.Trim()));
+                        dataOper.ExecSQLResult("UPDATE tb_User SET Remember = 1 WHERE ID = " + PublicClass.LoginID);
 
                         if (cBoxAutoLogin.Checked)
                         {
-                            dataOper.ExecSQLResult("UPDATE tb_User SET AutoLogin =  WHERE ID = " + int.Parse(txtID.Text.Trim()));
+                            dataOper.ExecSQLResult("UPDATE tb_User SET AutoLogin = 1 WHERE ID = " + PublicClass.LoginID);
                         }
                     }
                     else
                     {
-                        dataOper.ExecSQLResult("UPDATE tb_User SET Remember = 0 WHERE ID = " + int.Parse(txtID.Text.Trim()));
-                        dataOper.ExecSQLResult("UPDATE tb_User SET AutoLogin = 0 WHERE ID = " + int.Parse(txtID.Text.Trim()));
+                        dataOper.ExecSQLResult("UPDATE tb_User SET Remember = 0 WHERE ID = " + PublicClass.LoginID);
+                        dataOper.ExecSQLResult("UPDATE tb_User SET AutoLogin = 0 WHERE ID = " + PublicClass.LoginID);
                     }
                 }
 
-                // Set Online Status
-                dataOper.ExecSQLResult("UPDATE tb_User SET Flag = 0 WHERE ID = " + int.Parse(txtID.Text.Trim()));
+                // Set User Status to Online
+                dataOper.ExecSQLResult("UPDATE tb_User SET Flag = 0 WHERE ID = " + PublicClass.LoginID);
 
                 // Create MainForm
                 Frm_Main MainForm = new Frm_Main();
@@ -95,12 +100,6 @@ namespace MyQQ
             {
                 MessageBox.Show("The input ID or Password is incorrect, Please try again.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-        }
-
-        private void txtPwd_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (e.KeyChar == '\r')
-                pBoxLogin_Click(sender, e);
         }
 
         private void cboxRemember_CheckedChanged(object sender, EventArgs e)
@@ -114,17 +113,19 @@ namespace MyQQ
         private void txtID_TextChanged(object sender, EventArgs e)
         {
             ValidateInput();
-            string sql = "SELECT Pwd, Remember, AutoLogin FROM tb_User WHERE ID =" + int.Parse(txtID.Text.Trim());
+            string sql = "SELECT Pwd, Remember, AutoLogin FROM tb_User WHERE ID =" + PublicClass.LoginID;
 
             DataSet ds = dataOper.GetDataSet(sql);
 
-            // 只有 DataSet 中有该行数据才执行验证记住密码、自动登录
+            // 只有 DataSet 中有该账号记录才执行验证记住密码、自动登录
             if (ds.Tables[0].Rows.Count > 0)
             {
                 // Remember Password
                 if (Convert.ToInt32(ds.Tables[0].Rows[0][1]) == 1)
                 {
                     cboxRemember.Checked = true;
+
+                    // Fill Password
                     txtPwd.Text = ds.Tables[0].Rows[0][0].ToString();
 
                     // Automatic Login
@@ -139,7 +140,7 @@ namespace MyQQ
 
         private void linkLblRag_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            RegisterForm registerForm = new RegisterForm();
+            Frm_Register registerForm = new Frm_Register();
             registerForm.ShowDialog();
         }
 

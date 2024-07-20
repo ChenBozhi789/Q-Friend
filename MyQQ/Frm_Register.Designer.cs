@@ -1,6 +1,6 @@
 ﻿namespace MyQQ
 {
-    partial class RegisterForm
+    partial class Frm_Register
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RegisterForm));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_Register));
             picLogo = new PictureBox();
             lblNickName = new Label();
             lblAge = new Label();
@@ -176,6 +176,7 @@
             // 
             txtRePwd.Location = new Point(100, 163);
             txtRePwd.Name = "txtRePwd";
+            txtRePwd.PasswordChar = '*';
             txtRePwd.Size = new Size(160, 27);
             txtRePwd.TabIndex = 10;
             // 
@@ -194,6 +195,7 @@
             // 
             txtPwd.Location = new Point(100, 130);
             txtPwd.Name = "txtPwd";
+            txtPwd.PasswordChar = '*';
             txtPwd.Size = new Size(160, 27);
             txtPwd.TabIndex = 8;
             // 
@@ -203,6 +205,7 @@
             txtAge.Name = "txtAge";
             txtAge.Size = new Size(160, 27);
             txtAge.TabIndex = 7;
+            txtAge.KeyPress += txtAge_KeyPress;
             // 
             // txtNickName
             // 
@@ -271,7 +274,7 @@
             btnCancel.UseVisualStyleBackColor = true;
             btnCancel.Click += btnCancel_Click;
             // 
-            // RegisterForm
+            // Frm_Register
             // 
             AutoScaleDimensions = new SizeF(9F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -284,7 +287,7 @@
             FormBorderStyle = FormBorderStyle.FixedSingle;
             Icon = (Icon)resources.GetObject("$this.Icon");
             MaximizeBox = false;
-            Name = "RegisterForm";
+            Name = "Frm_Register";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Register Form";
             Load += RegisterForm_Load;

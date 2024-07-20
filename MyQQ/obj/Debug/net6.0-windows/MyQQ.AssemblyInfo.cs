@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MyQQ")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4a091ac598e9aa4204fa78069e075a2836da770f")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+abd607be11890187dc1356dc882f1a30d0a415b0")]
 [assembly: System.Reflection.AssemblyProductAttribute("MyQQ")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MyQQ")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -11,14 +11,14 @@ using System.Windows.Forms;
 
 namespace MyQQ
 {
-    public partial class RegisterForm : Form
+    public partial class Frm_Register : Form
     {
-        DataOperator dataOperator = new DataOperator();
-
-        public RegisterForm()
+        public Frm_Register()
         {
             InitializeComponent();
         }
+
+        DataOperator dataOperator = new DataOperator();
 
         private void RegisterForm_Load(object sender, EventArgs e)
         {
@@ -71,16 +71,20 @@ namespace MyQQ
             }
 
             int qqNum;
+            // Pop-up message
             string message;
             string sex = rbtnMale.Checked ? rbtnMale.Text : rbtnFemale.Text;
-            string sql = string.Format("INSERT INTO tb_User (Pwd, NickName, Sex, Age, Name, Star, BloodType) VALUES ('{0}', '{1}', '{2}', '{3}', '{4}', '{5}', '{6}'); " +
-                "SELECT @@IDENTITY FROM tb_User",
-                txtPwd.Text.Trim(),
-                txtNickName.Text.Trim(),
-                sex, int.Parse(txtAge.Text.Trim()),
-                txtRealName.Text.Trim(),
-                cboxStar.Text,
-                cbocBloodType.Text);
+
+            // Insert newly added User info to database
+            string sql = string.Format("INSERT INTO tb_User (Pwd, NickName, Sex, Age, Name, Star, BloodType) " + 
+                "VALUES ('{0}', '{1}', '{2}', '{3}', '{4}', '{5}', '{6}') ",
+                txtPwd.Text.Trim(), // Pwd
+                txtNickName.Text.Trim(), // NickName
+                sex, // Sex
+                int.Parse(txtAge.Text.Trim()), // Age
+                txtRealName.Text.Trim(), // Name
+                cboxStar.Text, // Star
+                cbocBloodType.Text); // BloodType
 
             SqlCommand command = new SqlCommand(sql, DataOperator.connection);
             DataOperator.connection.Open();
@@ -88,7 +92,8 @@ namespace MyQQ
 
             if (result == 1)
             {
-                sql = "SELECT SCOPE_IDENTITY() FROM tb_User";
+                sql = "SELECT @@IDENTITY FROM tb_User";
+                //sql = "SELECT SCOPE_IDENTITY() FROM tb_User";
                 command = new SqlCommand(sql, DataOperator.connection);
                 // QQ 号为转换为数字的新插入标识值
                 qqNum = Convert.ToInt32(command.ExecuteScalar());
@@ -106,6 +111,17 @@ namespace MyQQ
         private void btnCancel_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void txtAge_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (char.IsDigit(e.KeyChar) || (e.KeyChar == '\r') || (e.KeyChar == '\b'))
+            {
+                e.Handled = false;
+            } else
+            {
+                e.Handled= true;
+            }
         }
     }
 }
